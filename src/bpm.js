@@ -8,6 +8,7 @@ function getBpm (bpm) {
   const triplet = measure / 3;
 
   return {
+    bpm: bpm,
     b1: measure,
     b2: half,
     b3: triplet,
