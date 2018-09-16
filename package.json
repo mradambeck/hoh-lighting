@@ -1,0 +1,16 @@
+{
+  "name": "hoh-lighting",
+  "version": "1.0.0",
+  "description": "Tessel lighting",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Adam Beck <abeck@housecanary.com>",
+  "license": "ISC",
+  "dependencies": {
+    "barcli": "0.0.25",
+    "johnny-five": "^1.0.0",
+    "tessel-io": "^1.2.0"
+  }
+}
