@@ -5,7 +5,7 @@ const SetList = require('./src/Setlist.js');
 
 const test = require('./songs/bullcrap.js');
 const output = require('./songs/output.js');
-let songs = [test, test, output];
+let songs = [output];
 
 const board = new five.Board({
   io: new Tessel()
