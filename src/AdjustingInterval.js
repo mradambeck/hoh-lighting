@@ -7,10 +7,11 @@
 * @param {function} errorFunc (Optional) Callback to run if the drift
 *                             exceeds interval
 */
-function AdjustingInterval (workFunc, interval, skipIfErr) {
+function AdjustingInterval (workFunc, interval, skipAmount) {
   var that = this;
   var expected;
   var timeout;
+  var amountToSkip = skipAmount || 0;
   this.interval = interval;
   var lastTimeout;
   var shouldRun = true;
@@ -20,7 +21,6 @@ function AdjustingInterval (workFunc, interval, skipIfErr) {
     workFunc();
     expected = Date.now() + this.interval;
     timeout = setTimeout(step, this.interval);
-    // this.timeout = timeout;
   };
 
   this.stop = function (callback) {
@@ -32,8 +32,7 @@ function AdjustingInterval (workFunc, interval, skipIfErr) {
 
   function step () {
     let drift = Date.now() - expected;
-    // TODO: Check how far over it is and maybe if less than 100ms or something, still do it
-    if (drift > that.interval && skipIfErr) {
+    if (drift > amountToSkip) {
       console.log(`drifted ${drift}`);
     } else {
       workFunc();

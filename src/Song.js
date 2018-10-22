@@ -28,7 +28,7 @@ class Song {
         action(this.count);
         this.count += 1;
       }
-    }, bpm, true);
+    }, bpm, 500);
 
     this.player.start();
   }
