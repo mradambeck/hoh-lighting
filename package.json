@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "t2 run index.js",
-    "new": "t2 run one-light.js",
+    "dev": "DEV=true t2 run index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Adam Beck <abeck@housecanary.com>",
@@ -13,6 +13,7 @@
   "dependencies": {
     "barcli": "0.0.25",
     "johnny-five": "^1.0.0",
+    "t2-cli": "^0.1.21",
     "tessel-io": "^1.2.0"
   },
   "peerDependencies": {

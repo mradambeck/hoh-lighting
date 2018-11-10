@@ -3,8 +3,9 @@ const five = require('johnny-five');
 const Song = require('./src/Song.js');
 const SetList = require('./src/Setlist.js');
 
-const test = require('./songs/bullcrap.js');
+// const test = require('./songs/bullcrap.js');
 const output = require('./songs/output.js');
+const channeling = require('./songs/channeling.js');
 let songs = [output];
 
 const board = new five.Board({
