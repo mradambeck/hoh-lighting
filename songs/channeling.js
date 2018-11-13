@@ -5,7 +5,7 @@ const empty = [
   [0], [0], [0], [0]
 ];
 
-const introGtr = [
+const intro = [
   [4],
   [4],
   [4],
@@ -58,13 +58,13 @@ const chorus = [
   [0, 0, 5, 0],
   [0, 0, 0, 5],
 
-  [1, 1, 1, 1],
-  [1, 1, 1, 1],
-  [1, 1, 1, 1],
-  [1, 1, 1, 1],
+  [5, 5, 5, 5],
+  [5, 5, 5, 5],
+  [5, 5, 5, 5],
+  [5, 5, 5, 5],
 
-  [1, 1, 1, 1],
-  [1, 1, 1, 1],
+  [5, 5, 5, 5],
+  [5, 5, 5, 5],
   [0, 0, 0, 0],
   [0, 0, 0, 0]
 ];
@@ -100,15 +100,15 @@ const chorusLast = [
   [0, 0, 5, 0],
   [0, 0, 0, 5],
 
-  [0],
-  [0],
-  [0],
-  [0],
+  [0, 0, 0, 0],
+  [0, 0, 0, 0],
+  [0, 0, 0, 0],
+  [0, 0, 0, 0],
 
-  [0],
-  [0],
-  [0],
-  [0]
+  [0, 0, 0, 0],
+  [0, 0, 0, 0],
+  [0, 0, 0, 0],
+  [0, 0, 0, 0]
 ];
 
 const verse = [
@@ -153,6 +153,143 @@ const verse = [
   [0, 0, 0, 0]
 ];
 
+const keyboardSolo = [
+  [1, 0, 0, 0],
+  [1, 0, 0, 0],
+  [1, 0, 0, 0],
+  [1, 0, 0, 0],
+
+  [0, 0, 0, 0],
+  [0, 0, 0, 0],
+  [0, 0, 0, 0],
+  [0, 0, 0, 0],
+
+  [0, 0, 0, 0],
+  [0, 0, 0, 0],
+  [0, 0, 0, 0],
+  [0, 0, 0, 0],
+
+  [0, 0, 0, 1],
+  [0, 0, 0, 1],
+  [0, 0, 0, 0],
+  [0, 0, 0, 0],
+
+  [0, 1, 0, 0],
+  [0, 1, 0, 0],
+  [0, 1, 0, 0],
+  [0, 1, 0, 0],
+
+  [0, 0, 0, 0],
+  [0, 0, 0, 0],
+  [0, 0, 0, 0],
+  [0, 0, 0, 0],
+
+  [0, 0, 0, 0],
+  [0, 0, 0, 0],
+  [0, 0, 0, 0],
+  [0, 0, 0, 0],
+
+  [0, 0, 0, 0],
+  [0, 0, 0, 0],
+  [0, 0, 0, 0],
+  [0, 0, 0, 0],
+
+  [0, 0, 0, 1],
+  [0, 0, 0, 1],
+  [0, 0, 0, 1],
+  [0, 0, 0, 1],
+
+  [0, 0, 0, 0],
+  [0, 0, 0, 0],
+  [0, 0, 0, 0],
+  [0, 0, 0, 0],
+
+  [0, 0, 0, 0],
+  [0, 0, 0, 0],
+  [0, 0, 0, 0],
+  [0, 0, 0, 0],
+
+  [1, 0, 0, 0],
+  [1, 0, 0, 0],
+  [0, 0, 0, 0],
+  [0, 0, 0, 0],
+
+  [0, 1, 0, 0],
+  [0, 1, 0, 0],
+  [0, 0, 0, 0],
+  [0, 0, 0, 0],
+
+  [0, 0, 1, 0],
+  [0, 0, 1, 0],
+  [0, 0, 0, 0],
+  [0, 0, 0, 0],
+
+  [0, 0, 0, 0],
+  [0, 0, 0, 0],
+  [0, 0, 0, 0],
+  [0, 0, 0, 0],
+
+  [0, 0, 0, 0],
+  [0, 0, 0, 0],
+  [0, 0, 0, 0],
+  [0, 0, 0, 0]
+];
+
+const bassBeat = [
+  [0, 0, 0, 0],
+  [0, 0, 0, 0],
+  [0, 1, 1, 0],
+  [0, 0, 0, 0],
+
+  [0, 1, 1, 0],
+  [0, 0, 0, 0],
+  [0, 0, 0, 0],
+  [0, 0, 0, 0]
+];
+
+const spiral = [
+  [5, 0, 0, 0],
+  [0, 5, 0, 0],
+  [0, 0, 5, 0],
+  [0, 0, 0, 5],
+
+  [5, 0, 0, 0],
+  [0, 5, 0, 0],
+  [0, 0, 5, 0],
+  [0, 0, 0, 5],
+
+  [5, 0, 0, 0],
+  [0, 5, 0, 0],
+  [0, 0, 5, 0],
+  [0, 0, 0, 5],
+
+  [5, 0, 0, 0],
+  [0, 5, 0, 0],
+  [0, 0, 5, 0],
+  [0, 0, 0, 5],
+
+  // boom
+  [5, 0, 0, 0],
+  [0, 5, 0, 0],
+  [0, 0, 5, 0],
+  [0, 0, 0, 5],
+
+  [5, 0, 0, 0],
+  [0, 5, 0, 0],
+  [0, 0, 5, 0],
+  [0, 0, 0, 5],
+
+  [5, 0, 0, 0],
+  [0, 5, 0, 0],
+  [0, 0, 5, 0],
+  [0, 0, 0, 5],
+
+  [5, 0, 0, 0],
+  [0, 5, 0, 0],
+  [0, 0, 5, 0],
+  [0, 0, 0, 5]
+];
+
 const song = {
   title: 'Channeling',
   notes: 4,
@@ -161,14 +298,45 @@ const song = {
 
     empty, empty, empty, empty,
     empty, empty, empty, empty,
-    introGtr, introGtr, introGtr, introGtr,
-    introGtr, introGtr, introGtr, introGtr,
-    introGtr, introGtr, introGtr, introGtr,
-    introGtr, introGtr, introGtr, introGtr,
+    // drums come in
+    intro, intro, intro, intro,
+    intro, intro, intro, intro,
+    // guitar comes in
+    intro, intro, intro, intro,
+    intro, intro, intro, intro,
+    // verse
     verse, verse, verse, verse,
     verse, verse, verse, verse,
+    // vocals
     verse, verse, verse, verse,
-    chorus, chorus, chorus, chorusLast
+    chorus, chorus, chorus, chorusLast,
+
+    keyboardSolo, keyboardSolo,
+    // vocals
+    bassBeat, bassBeat, bassBeat, bassBeat,
+    bassBeat, bassBeat, bassBeat, bassBeat,
+    bassBeat, bassBeat, bassBeat, bassBeat,
+    bassBeat, bassBeat, bassBeat, bassBeat,
+    // instrumental w guitar
+    verse, verse, verse, verse,
+    verse, verse, verse, verse,
+
+    // vocals
+    empty, empty, empty, empty,
+    // chorus
+    chorus, chorus, chorus, chorusLast,
+
+    // key solo
+    bassBeat, bassBeat, bassBeat, bassBeat,
+    bassBeat, bassBeat, bassBeat, bassBeat,
+    // no drums
+    empty, empty, empty, empty,
+    // drums
+    verse, verse, verse, verse,
+    spiral, spiral, spiral, spiral,
+    spiral, spiral, spiral, spiral,
+    bassBeat, bassBeat, bassBeat, bassBeat,
+    bassBeat, bassBeat, bassBeat, bassBeat
   )
 };
 
