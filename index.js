@@ -11,8 +11,9 @@ const pathwork = require('./songs/pathwork.js');
 const din = require('./songs/din.js');
 const sightline = require('./songs/sightline.js');
 const blackWaves = require('./songs/black-waves.js');
+const remain = require('./songs/remain.js');
 
-const songs = [blackWaves, sightline, din, pathwork, sleep, channeling, output];
+const songs = [remain, blackWaves, sightline, din, pathwork, sleep, channeling, output];
 
 const board = new five.Board({
   io: new Tessel()
@@ -23,7 +24,7 @@ let turnOffLights;
 board.on('ready', function () {
   // To get dimming, these need to be connected to PWM outputs:
   const leds = new five.Leds(['a5', 'a6', 'b5', 'b6']);
-  const button = new five.Button('a7');
+  const button = new five.Button({pin: 'a7', invert: true});
   const renderedSongs = songs.map(song => {
     return new Song(song, leds);
   });
@@ -31,7 +32,7 @@ board.on('ready', function () {
 
   // The footswitch we have seems to be in reverse,
   // so we need to use 'release' instead of 'press'
-  button.on('release', () => {
+  button.on('press', () => {
     set.handleClick();
   });
 
