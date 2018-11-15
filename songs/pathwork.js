@@ -133,17 +133,17 @@ const song = {
   bpm: 102,
   pattern: [].concat(
     clickIn,
-    // swirl, swirl, swirl, swirl,
-    // swirl, swirl, swirl, swirl,
-    // swirl, swirl, swirl, swirl,
-    // swirl, swirl, swirl, swirl,
-    //
-    // pause,
-    //
-    // noise, noise, noise, noise,
-    //
-    // swirl, swirl, swirl, swirl,
-    // swirl, swirl, swirl, swirl,
+    swirl, swirl, swirl, swirl,
+    swirl, swirl, swirl, swirl,
+    swirl, swirl, swirl, swirl,
+    swirl, swirl, swirl, swirl,
+
+    pause,
+
+    noise, noise, noise, noise,
+
+    swirl, swirl, swirl, swirl,
+    swirl, swirl, swirl, swirl,
 
     thump, thump, thump, thump,
 
