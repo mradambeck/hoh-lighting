@@ -1,4 +1,5 @@
 const Interval = require('./AdjustingInterval');
+const five = require('johnny-five');
 
 class Song {
   constructor (song, leds, callback) {
@@ -52,7 +53,7 @@ class Song {
         // Pulse and Strobe looks best if just left running
         if (index > 0) {
           const prevLed = pattern[index - 1][i];
-          if (led === prevLed && (led !== 2 || led !== 3)) {
+          if (led === prevLed && (led !== 2 || led !== 3 || led !== 4)) {
             return;
           }
         }
@@ -61,8 +62,9 @@ class Song {
         light.stop().off();
 
         if (led === 5) {
-          light.blink(30);
+          light.blink(40);
         } else if (led === 4) {
+          // pulse is fucking broken
           light.pulse(tempo);
         } else if (led === 3) {
           light.fadeIn(tempo);
