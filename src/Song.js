@@ -9,6 +9,7 @@ class Song {
     this.pattern = song.pattern;
     this.leds = leds;
     this.player = () => {};
+    this.divisor = song.divisor || 4;
     this.callback = callback || function () {};
     // bind methods
     this.start = this.start.bind(this);
@@ -62,9 +63,10 @@ class Song {
         light.stop().off();
 
         if (led === 6) {
-          const doubleTempo = tempo / 2;
-          light.blink(doubleTempo);
+          const blinkTempo = tempo / this.divisor;
+          light.blink(blinkTempo);
         } else if (led === 5) {
+          // strobe
           light.blink(40);
         } else if (led === 4) {
           // BUG: pulse and anything with fade seems to cause a memory leak

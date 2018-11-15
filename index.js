@@ -6,7 +6,8 @@ const SetList = require('./src/Setlist.js');
 // const test = require('./songs/bullcrap.js');
 const output = require('./songs/output.js');
 const channeling = require('./songs/channeling.js');
-let songs = [channeling, output];
+const sleep = require('./songs/sleep.js');
+const songs = [sleep, channeling, output];
 
 const board = new five.Board({
   io: new Tessel()
@@ -18,10 +19,10 @@ board.on('ready', function () {
   // To get dimming, these need to be connected to PWM outputs:
   const leds = new five.Leds(['a5', 'a6', 'b5', 'b6']);
   const button = new five.Button('a7');
-  songs = songs.map(song => {
+  const renderedSongs = songs.map(song => {
     return new Song(song, leds);
   });
-  const set = new SetList(songs);
+  const set = new SetList(renderedSongs);
 
   // The footswitch we have seems to be in reverse,
   // so we need to use 'release' instead of 'press'
