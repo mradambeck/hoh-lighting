@@ -1,8 +1,8 @@
 const pulse = [
-  [4], [4], [4], [4],
-  [4], [4], [4], [4],
-  [4], [4], [4], [4],
-  [4], [4], [4], [4]
+  [0, 5, 5, 0], [0, 0, 0, 0], [0, 5, 5, 0], [0, 0, 0, 0],
+  [0, 5, 5, 0], [0, 0, 0, 0], [0, 5, 5, 0], [0, 0, 0, 0],
+  [0, 5, 5, 0], [0, 0, 0, 0], [0, 5, 5, 0], [0, 0, 0, 0],
+  [0, 5, 5, 0], [0, 0, 0, 0], [0, 5, 5, 0], [0, 0, 0, 0]
 ];
 
 const kickSnr = [
@@ -113,7 +113,7 @@ const hold = [
 const song = {
   title: 'Output',
   notes: 2,
-  bpm: 120,
+  bpm: 122,
   pattern: [].concat(
     pulse, pulse, pulse, pulse,
     kickSnr, kickSnr, kickSnr, kickSnr, kickSnr, kickSnr, kickSnr, kickSnr,

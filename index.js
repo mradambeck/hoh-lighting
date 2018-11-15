@@ -6,7 +6,7 @@ const SetList = require('./src/Setlist.js');
 // const test = require('./songs/bullcrap.js');
 const output = require('./songs/output.js');
 const channeling = require('./songs/channeling.js');
-let songs = [channeling];
+let songs = [output, channeling];
 
 const board = new five.Board({
   io: new Tessel()
@@ -23,7 +23,9 @@ board.on('ready', function () {
   });
   const set = new SetList(songs);
 
-  button.on('press', () => {
+  // The footswitch we have seems to be in reverse,
+  // so we need to use 'release' instead of 'press'
+  button.on('release', () => {
     set.handleClick();
   });
 
