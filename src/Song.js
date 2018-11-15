@@ -61,10 +61,13 @@ class Song {
         const light = pattern[index].length === 1 ? this.leds : this.leds[i];
         light.stop().off();
 
-        if (led === 5) {
+        if (led === 6) {
+          const doubleTempo = tempo / 2;
+          light.blink(doubleTempo);
+        } else if (led === 5) {
           light.blink(40);
         } else if (led === 4) {
-          // pulse is fucking broken
+          // BUG: pulse and anything with fade seems to cause a memory leak
           light.pulse(tempo);
         } else if (led === 3) {
           light.fadeIn(tempo);
