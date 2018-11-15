@@ -9,8 +9,9 @@ const channeling = require('./songs/channeling.js');
 const sleep = require('./songs/sleep.js');
 const pathwork = require('./songs/pathwork.js');
 const din = require('./songs/din.js');
+const sightline = require('./songs/sightline.js');
 
-const songs = [din, pathwork, sleep, channeling, output];
+const songs = [sightline, din, pathwork, sleep, channeling, output];
 
 const board = new five.Board({
   io: new Tessel()
