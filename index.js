@@ -6,7 +6,7 @@ const SetList = require('./src/Setlist.js');
 // const test = require('./songs/bullcrap.js');
 const output = require('./songs/output.js');
 const channeling = require('./songs/channeling.js');
-let songs = [output, channeling];
+let songs = [channeling, output];
 
 const board = new five.Board({
   io: new Tessel()
