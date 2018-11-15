@@ -1,5 +1,4 @@
 const Interval = require('./AdjustingInterval');
-const five = require('johnny-five');
 
 class Song {
   constructor (song, leds, callback) {
@@ -22,7 +21,7 @@ class Song {
     let bpm = this.tempo;
 
     this.player = new Interval(() => {
-      console.log(`${this.count} of ${this.pattern.length}`);
+      console.log(`${this.count} of ${this.pattern.length - 1}`);
       if (this.count === this.pattern.length - 1) {
         this.player.stop(this.reset);
         this.callback();
@@ -51,14 +50,15 @@ class Song {
     this.loop((index) => {
       const thisBeat = pattern[index];
       thisBeat.forEach((led, i) => {
-        // Pulse and Strobe looks best if just left running
+        // Everything but fades looks best if just left running
         if (index > 0) {
           const prevLed = pattern[index - 1][i];
-          if (led === prevLed && (led !== 2 || led !== 3 || led !== 4)) {
+          if (led === prevLed && (led !== 2 && led !== 3)) {
             return;
           }
         }
 
+        // if it's just one item in the array, lets apply to the whole row:
         const light = pattern[index].length === 1 ? this.leds : this.leds[i];
         light.stop().off();
 

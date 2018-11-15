@@ -3,11 +3,13 @@ const five = require('johnny-five');
 const Song = require('./src/Song.js');
 const SetList = require('./src/Setlist.js');
 
-// const test = require('./songs/bullcrap.js');
+// songs
 const output = require('./songs/output.js');
 const channeling = require('./songs/channeling.js');
 const sleep = require('./songs/sleep.js');
-const songs = [sleep, channeling, output];
+const pathwork = require('./songs/pathwork.js');
+
+const songs = [pathwork, sleep, channeling, output];
 
 const board = new five.Board({
   io: new Tessel()
