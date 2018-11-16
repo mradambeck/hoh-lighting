@@ -12,6 +12,13 @@ const empty = [
   [0], [0], [0], [0]
 ];
 
+const firstEmpty = [
+  [1], [0], [0], [0],
+  [0], [0], [0], [0],
+  [0], [0], [0], [0],
+  [0], [0], [0], [0]
+];
+
 const intro = [
   [6, 0, 0, 6],
   [6, 0, 0, 6],
@@ -304,7 +311,7 @@ const song = {
   pattern: [].concat(
     clickIn,
     clickIn,
-    empty, empty, empty, empty,
+    firstEmpty, empty, empty, empty,
     empty, empty, empty, empty,
     // drums come in
     intro, intro, intro, intro,
