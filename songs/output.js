@@ -120,8 +120,8 @@ const hold = [
 const song = {
   title: 'Output',
   notes: 2,
-  // bpm: 122,
-  bpm: 120,
+  bpm: 122,
+  // bpm: 120,
   pattern: [].concat(
     clickIn,
     pulse, pulse, pulse, pulse,

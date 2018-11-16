@@ -130,7 +130,7 @@ const instro = [
 const song = {
   title: 'Pathwork',
   notes: 2,
-  bpm: 102,
+  bpm: 104,
   pattern: [].concat(
     clickIn,
     swirl, swirl, swirl, swirl,

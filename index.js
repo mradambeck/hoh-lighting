@@ -13,7 +13,16 @@ const sightline = require('./songs/sightline.js');
 const blackWaves = require('./songs/black-waves.js');
 const remain = require('./songs/remain.js');
 
-const songs = [remain, blackWaves, sightline, din, pathwork, sleep, channeling, output];
+const songs = [
+  channeling,
+  sightline,
+  pathwork,
+  output,
+  blackWaves,
+  sleep,
+  din,
+  remain
+];
 
 const board = new five.Board({
   io: new Tessel()

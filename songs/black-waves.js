@@ -69,7 +69,7 @@ const song = {
     beat, beat, beat, beat,
 
     beat, beat, beat, beat,
-    beat, beat, beat, beat,
+    // beat, beat, beat, beat,
 
     snare, snare, snare, snare,
 

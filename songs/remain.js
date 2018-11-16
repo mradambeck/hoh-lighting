@@ -28,10 +28,10 @@ const beat = [
 ];
 
 const chorus = [
-  [6], [6], [6], [0],
-  [6], [6], [6], [0],
-  [6], [6], [6], [0],
-  [6], [6], [6], [0],
+  [6], [6], [6], [6],
+  [6], [6], [6], [6],
+  [6], [6], [6], [6],
+  [6], [6], [6], [6]
 ];
 
 const lit = [
@@ -44,9 +44,9 @@ const lit = [
 const song = {
   title: 'Remain',
   notes: 2,
-  bpm: 190,
+  bpm: 191,
   pattern: [].concat(
-    clickIn,
+    clickIn, clickIn,
 
     beat, beat,
     beat, beat, beat, beat,

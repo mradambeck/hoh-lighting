@@ -139,8 +139,8 @@ const bridge = [
 const song = {
   title: 'Sleep',
   notes: 2,
-  // bpm: 128,
-  bpm: 126,
+  bpm: 128,
+  // bpm: 126,
   pattern: [].concat(
     clickIn,
     toms, toms, toms, toms,
